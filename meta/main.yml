@@ -1,0 +1,18 @@
+---
+galaxy_info:
+  author: 'sscheib'
+  role_name: 'openwrt_bootstrap'
+  description: 'This role bootstraps Ansible on OpenWrt by installing the required packages for Ansible to run.'
+  license: 'GPL-2.0-or-later'
+  min_ansible_version: '2.12'
+  platforms:
+    - name: 'OpenWrt'
+      versions:
+        - 22.03
+        - 21.02
+
+  galaxy_tags:
+    - 'bootstrap'
+    - 'openwrt'
+
+dependencies: []

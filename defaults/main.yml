@@ -1,0 +1,20 @@
+---
+# minimal required packages for Ansible to work
+_def_minimal_required_packages:
+  - 'python3-light'
+  - 'python3-base'
+  - 'libffi'
+  - 'python3-logging'
+  - 'python3-multiprocessing'
+  - 'python3-distutils'
+  - 'python3-email'
+
+# Python3 full installation packages
+_def_full_required_packages:
+  - 'python3'
+
+# whether to install the full Python3 version
+_def_install_full_python: false
+
+# whether to update opkg cache before attempting to install the packages
+_def_update_opkg_cache: true
