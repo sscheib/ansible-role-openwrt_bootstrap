@@ -1,0 +1,14 @@
+---
+profile: 'production'
+
+warn_list:
+  - 'experimental'
+
+enable_list:
+  - 'args'
+  - 'empty-string-compare'
+  - 'no-log-password'
+  - 'no-same-owner'
+  - 'name[prefix]'
+
+offline: true
