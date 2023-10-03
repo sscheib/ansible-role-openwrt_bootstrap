@@ -8,8 +8,8 @@ galaxy_info:
   platforms:
     - name: 'OpenWrt'
       versions:
-        - 22.03
-        - 21.02
+        - '22.03'
+        - '21.02'
 
   galaxy_tags:
     - 'bootstrap'
