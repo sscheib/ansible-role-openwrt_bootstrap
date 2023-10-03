@@ -17,28 +17,12 @@ A device that has enough flash storage space available to hold either a full-blo
 
 Role Variables
 --------------
-```
-**Optional**
-- minimal_required_packages: minimal required packages for Ansible to work
-  Default value:
-    - 'python3-light'
-    - 'python3-base'
-    - 'libffi'
-    - 'python3-logging'
-    - 'python3-multiprocessing'
-    - 'python3-distutils'
-    - 'python3-email'
-
-- full_required_packages: Python3 full installation packages
-  Default value:
-    - 'python3'
-
-- install_full_python: whether to install the full Python3 version
-  Default value: false
-
-- update_opkg_cache: whether to update opkg cache before attempting to install the packages (recommended)
-  Default value: true
-```
+| variable                          | default                      | required | description                                                                    |
+| :---------------------------------| :--------------------------- | :------- | :----------------------------------------------------------------------------- |
+| `minimal_required_packages`       | See `defaults/main.yml`      | false    | minimal required packages for Ansible to work                                  |
+| `full_required_packages`          | `['python3']`                | false    | Python3 full installation packages                                             | 
+| `install_full_python`             | `false`                      | false    | whether to install the full Python3 version                                    |
+| `update_opkg_cache`               | `true`                       | false    | whether to update opkg cache before attempting to install the packages         |
 
 Dependencies
 ------------
