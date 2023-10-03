@@ -7,13 +7,13 @@ Requirements
 ------------
 
 A device that has enough flash storage space available to hold either a full-blown python3 installation or the minimal set of python dependencies:
-- 'python3-light'
-- 'python3-base'
-- 'libffi'
-- 'python3-logging'
-- 'python3-multiprocessing'
-- 'python3-distutils'
-- 'python3-email'
+- python3-light
+- python3-base
+- libffi
+- python3-logging
+- python3-multiprocessing
+- python3-distutils
+- python3-email
 
 Role Variables
 --------------
