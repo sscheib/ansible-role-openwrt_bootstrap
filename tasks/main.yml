@@ -53,3 +53,4 @@
   register: '__t_opkg_install'
   changed_when: __t_opkg_install.stdout_lines | reject('match', '^.+is up to date.$') | length > 0
   when: _install_full_python
+
