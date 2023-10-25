@@ -10,3 +10,4 @@ _install_full_python: '{{ install_full_python | default(_def_install_full_python
 
 # whether to update opkg cache before attempting to install the packages
 _update_opkg_cache: '{{ update_opkg_cache | default(_def_update_opkg_cache) }}'
+...
