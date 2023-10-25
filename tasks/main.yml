@@ -2,29 +2,29 @@
 - name: 'Ensure variables are defined properly'
   ansible.builtin.assert:
     that:
-      # _update_opkg_cache
-      - _update_opkg_cache is defined
-      - _update_opkg_cache is boolean
+      # _update_opkg_cache'
+      - '_update_opkg_cache is defined'
+      - '_update_opkg_cache is boolean'
 
-      # _install_full_python
-      - _install_full_python is defined
-      - _install_full_python is boolean
+      # _install_full_python'
+      - '_install_full_python is defined'
+      - '_install_full_python is boolean'
 
-      # _minimal_required_packages
-      - _minimal_required_packages is defined
-      - _minimal_required_packages is not string
-      - _minimal_required_packages is not mapping
-      - _minimal_required_packages is iterable
-      - _minimal_required_packages | list | string == _minimal_required_packages | string
-      - _minimal_required_packages | length > 0
+      # _minimal_required_packages'
+      - '_minimal_required_packages is defined'
+      - '_minimal_required_packages is not string'
+      - '_minimal_required_packages is not mapping'
+      - '_minimal_required_packages is iterable'
+      - '_minimal_required_packages | list | string == _minimal_required_packages | string'
+      - '_minimal_required_packages | length > 0'
 
-      # _full_required_packages
-      - _full_required_packages is defined
-      - _full_required_packages is not string
-      - _full_required_packages is not mapping
-      - _full_required_packages is iterable
-      - _full_required_packages | list | string == _full_required_packages | string
-      - _full_required_packages | length > 0
+      # _full_required_packages'
+      - '_full_required_packages is defined'
+      - '_full_required_packages is not string'
+      - '_full_required_packages is not mapping'
+      - '_full_required_packages is iterable'
+      - '_full_required_packages | list | string == _full_required_packages | string'
+      - '_full_required_packages | length > 0'
 
     success_msg: 'Variables are defined properly'
     fail_msg: 'One or more variables failed to validate'
@@ -34,7 +34,7 @@
   args:
     executable: '/bin/ash'
   changed_when: 'false'
-  when: _update_opkg_cache
+  when: '_update_opkg_cache'
 
 - name: 'Ensure minimal required packages are installed for Ansible to work'
   ansible.builtin.raw: >
@@ -42,8 +42,8 @@
   args:
     executable: '/bin/ash'
   register: '__t_opkg_install'
-  changed_when: __t_opkg_install.stdout_lines | reject('match', '^.+is up to date.$') | length > 0
-  when: not _install_full_python
+  changed_when: "__t_opkg_install.stdout_lines | reject('match', '^.+is up to date.$') | length > 0"
+  when: 'not _install_full_python'
 
 - name: 'Install full python3 package'
   ansible.builtin.raw: >
@@ -51,5 +51,6 @@
   args:
     executable: '/bin/ash'
   register: '__t_opkg_install'
-  changed_when: __t_opkg_install.stdout_lines | reject('match', '^.+is up to date.$') | length > 0
-  when: _install_full_python
+  changed_when: "__t_opkg_install.stdout_lines | reject('match', '^.+is up to date.$') | length > 0"
+  when: '_install_full_python'
+...

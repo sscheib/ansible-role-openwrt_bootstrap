@@ -18,3 +18,4 @@ _def_install_full_python: false
 
 # whether to update opkg cache before attempting to install the packages
 _def_update_opkg_cache: true
+...
