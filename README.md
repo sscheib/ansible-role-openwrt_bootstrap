@@ -24,6 +24,7 @@ A device that has enough flash storage space available to hold either a full-blo
 - `python3-multiprocessing`
 - `python3-distutils`
 - `python3-email`
+- `python3-urllib`
 
 ## Role Variables
 
