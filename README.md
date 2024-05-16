@@ -1,49 +1,58 @@
-[![ansible-lint](https://github.com/sscheib/ansible-role-openwrt_bootstrap/actions/workflows/ansible-lint.yml/badge.svg)](https://github.com/sscheib/ansible-role-openwrt_bootstrap/actions/workflows/ansible-lint.yml) [![Publish latest release to Ansible Galaxy](https://github.com/sscheib/ansible-role-openwrt_bootstrap/actions/workflows/ansible-galaxy.yml/badge.svg?branch=main)](https://github.com/sscheib/ansible-role-openwrt_bootstrap/actions/workflows/ansible-galaxy.yml)
+<!-- markdownlint-disable MD013 MD041 -->
+[![ansible-lint](https://github.com/sscheib/ansible-role-openwrt_extroot/actions/workflows/ansible-lint.yml/badge.svg)](https://github.com/sscheib/ansible-role-openwrt_extroot/actions/workflows/ansible-lint.yml) [![Publish to Ansible Galaxy](https://github.com/sscheib/ansible-role-openwrt_extroot/actions/workflows/release.yml/badge.svg)](https://github.com/sscheib/ansible-role-openwrt_extroot/actions/workflows/release.yml) [![markdown link check](https://github.com/sscheib/ansible-role-openwrt_extroot/actions/workflows/markdown-link-check.yml/badge.svg)](https://github.com/sscheib/ansible-role-openwrt_extroot/actions/workflows/markdown-link-check.yml) [![markdownlint](https://github.com/sscheib/ansible-role-openwrt_extroot/actions/workflows/markdownlint.yml/badge.svg)](https://github.com/sscheib/ansible-role-openwrt_extroot/actions/workflows/markdownlint.yml) [![pyspelling](https://github.com/sscheib/ansible-role-openwrt_extroot/actions/workflows/pyspelling.yml/badge.svg)](https://github.com/sscheib/ansible-role-openwrt_extroot/actions/workflows/pyspelling.yml)
 
-openwrt_bootstrap
-=========
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit) [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits)](https://conventionalcommits.org) [![License: GPL v2](https://img.shields.io/badge/License-GPL_v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
+<!-- markdownlint-disable MD013 MD041 -->
 
-Bootstrap Ansible on OpenWrt.
+## openwrt_bootstrap
 
-Requirements
-------------
+Bootstrap Python on `OpenWrt` devices by installing the required Python packages for Ansible to run.
 
-A device that has enough flash storage space available to hold either a full-blown python3 installation or the minimal set of python dependencies:
-- python3-light
-- python3-base
-- libffi
-- python3-logging
-- python3-multiprocessing
-- python3-distutils
-- python3-email
+## Requirements
 
-Role Variables
---------------
+A device that has enough flash storage space available to hold either a full-blown `python3` installation or the minimal set of Python dependencies:
+
+- `python3-light`
+- `python3-base`
+- `libffi`
+- `python3-logging`
+- `python3-multiprocessing`
+- `python3-distutils`
+- `python3-email`
+
+## Role Variables
+
 | variable                          | default                      | required | description                                                                    |
 | :---------------------------------| :--------------------------- | :------- | :----------------------------------------------------------------------------- |
-| `minimal_required_packages`       | See `defaults/main.yml`      | false    | minimal required packages for Ansible to work                                  |
-| `full_required_packages`          | `['python3']`                | false    | Python3 full installation packages                                             | 
-| `install_full_python`             | `false`                      | false    | whether to install the full Python3 version                                    |
-| `update_opkg_cache`               | `true`                       | false    | whether to update opkg cache before attempting to install the packages         |
+| `bts_minimal_required_package`    | See `defaults/main.yml`      | false    | Minimal required packages for Ansible to work                                  |
+| `bts_full_required_packages`      | `['python3']`                | false    | Python3 full installation packages                                             |
+| `bts_install_full_python`         | `false`                      | false    | Whether to install the full Python3 version                                    |
+| `bts_update_opkg_cache`           | `true`                       | false    | Whether to update `opkg` cache before attempting to install the packages       |
 
-Dependencies
-------------
+## Dependencies
 
 None
 
-Example Playbook
-----------------
+## Example Playbook
 
-```
+```yaml
+---
 - hosts: 'all'
   gather_facts: false
   vars:
     install_full_python: true
   roles:
     - 'openwrt_bootstrap'
+...
 ```
 
-License
--------
+## Contributing
 
-GPLv2 or later
+First off, thanks for taking the time to contribute! ❤️
+
+All types of contributions are encouraged and valued.
+Please See the [`CONTRIBUTING.md`](CONTRIBUTING.md) for different ways to help and details about how this project handles them.
+
+## License
+
+[`GPL-2.0-or-later`](LICENSE)
