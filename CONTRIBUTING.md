@@ -1,4 +1,4 @@
-# Contributing to ansible-role-openwrt_extroot
+# Contributing to this project
 
 First off, thanks for taking the time to contribute! ❤️
 
