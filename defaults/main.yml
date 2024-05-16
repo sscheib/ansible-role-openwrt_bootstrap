@@ -8,6 +8,7 @@ _def_bts_minimal_required_packages:
   - 'python3-multiprocessing'
   - 'python3-distutils'
   - 'python3-email'
+  - 'python3-urllib'
 
 # Python3 full installation packages
 _def_bts_full_required_packages:
