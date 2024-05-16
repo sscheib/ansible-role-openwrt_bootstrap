@@ -1,13 +1,13 @@
 ---
 # minimal required packages for Ansible to work
-_minimal_required_packages: '{{ minimal_required_packages | default(_def_minimal_required_packages) }}'
+_bts_minimal_required_packages: '{{ bts_minimal_required_packages | default(_def_bts_minimal_required_packages) }}'
 
 # Python3 full installation packages
-_full_required_packages: '{{ full_required_packages | default(_def_full_required_packages) }}'
+_bts_full_required_packages: '{{ bts_full_required_packages | default(_def_bts_full_required_packages) }}'
 
 # whether to install the full Python3 version
-_install_full_python: '{{ install_full_python | default(_def_install_full_python) }}'
+_bts_install_full_python: '{{ bts_install_full_python | default(_def_bts_install_full_python) }}'
 
-# whether to update opkg cache before attempting to install the packages
-_update_opkg_cache: '{{ update_opkg_cache | default(_def_update_opkg_cache) }}'
+# whether to update the package manager cache before attempting to install the packages
+_bts_update_opkg_cache: '{{ bts_update_opkg_cache | default(_def_bts_update_opkg_cache) }}'
 ...
