@@ -9,10 +9,12 @@ _def_bts_minimal_required_packages:
   - 'python3-distutils'
   - 'python3-email'
   - 'python3-urllib'
+  - 'python3-decimal'
 
 # Python3 full installation packages
 _def_bts_full_required_packages:
   - 'python3'
+  - 'python3-decimal'
 
 # whether to install the full Python3 version
 _def_bts_install_full_python: false
